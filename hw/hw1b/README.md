@@ -2,19 +2,27 @@
 
 *I pledge my honor that I have abided by the Stevens Honor System. - Joshua Schmidt* 1/30/2020
 
+## entities in the system
+
+- source of passengers
+- queues (lines)
+- servers for bag checks
+- distributors (signs, personnel) for directing people to VIP lines, security lines, etc.
+- security checks
+- extra security checks
+
 ## Attributes of airport security system
 
 - source
-  - what mode of transportation was used, and crowding at the source entry (traffic)
   - arrival distribution - when the travellers are arriving
 - ticket machine queue
   - physical length limitation of ticket machine queue
   - distribution of customers entering and leaving the queue
 - ticket machine servers
   - how many ticket machines there are
-  - how many steps are involved before receiving the ticket and confirming check-in
+  - how complicated the machine is for getting the ticket and confirming check-in
 - bag check queues
-  - how many vip customers there typically are
+  - how many vip customers there are
   - how many customers have checked bags
 - bag check servers
   - how many servers there are for the standard queue
@@ -31,7 +39,7 @@
   - frequency of second checks triggered for body scan
 - flight delays
   - distribution of flights delayed overnight, necessitating lodging
-  - if airport has lodging in the secure area
+  - if airport has lodging in the secure area or if people need to leave and repeat the security process the next day
 
 ![system diagram](./block_diagram.jpg){ width=100% }
 
