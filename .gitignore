@@ -1,3 +1,10 @@
+# omnetpp stuff
+.cproject
+.oppbuildspec
+.qtenvrc
+*_dbg
+out/
+
 # Prerequisites
 *.d
 
