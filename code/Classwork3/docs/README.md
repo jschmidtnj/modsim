@@ -1,6 +1,6 @@
 # classwork 3
 
-*I pledge my honor that I have abided by the Stevens Honor System. - Joshua Schmidt* 2/9/2020
+*I pledge my honor that I have abided by the Stevens Honor System. - Joshua Schmidt, Shivam Sheth* 2/9/2020
 
 ## no modifications
 
