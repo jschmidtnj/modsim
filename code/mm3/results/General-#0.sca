@@ -1,0 +1,102 @@
+version 2
+run General-0-20200403-21:45:44-37242
+attr configname General
+attr datetime 20200403-21:45:44
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Mm3
+attr processid 37242
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.source.interArrivalTime exponential(1.0s)
+param **.server.serviceTime exponential(1.0s)
+param **.source.numJobs 10000
+param **.server1.serviceTime exponential(1.0s)
+param **.server2.serviceTime exponential(1.0s)
+
+scalar Mm3.source created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Mm3.passiveQueue queueingTime:mean 0.46201607660328
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Mm3.passiveQueue queueingTime:max 3.875176698899
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Mm3.passiveQueue queueLength:timeavg 0.039937305493929
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Mm3.passiveQueue queueLength:max 6
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Mm3.passiveQueue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Mm3.server busy:timeavg 0.52056066627527
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Mm3.server1 busy:timeavg 0.31396257948814
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Mm3.server2 busy:timeavg 0.15952401608159
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Mm3.sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Mm3.sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Mm3.sink delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Mm3.sink delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Mm3.sink queuesVisited:mean 0.1724
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Mm3.sink queuesVisited:max 2
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Mm3.sink totalServiceTime:mean 0.99127151516312
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Mm3.sink totalServiceTime:max 10.722324979609
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Mm3.sink totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Mm3.sink totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Mm3.sink totalQueueingTime:mean 0.039825785803203
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Mm3.sink totalQueueingTime:max 3.875176698899
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Mm3.sink lifeTime:mean 1.0310973009663
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Mm3.sink lifeTime:max 10.722324979609
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+

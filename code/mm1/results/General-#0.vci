@@ -1,0 +1,31 @@
+file 625273 1585965479                                          
+version 2
+run General-0-20200403-21:57:33-38134
+attr configname General
+attr datetime 20200403-21:57:33
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Mm1
+attr processid 38134
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.source.interArrivalTime exponential(1.0s)
+param **.queue.serviceTime 0.5s
+param **.source.numJobs 10000
+
+vector 0 Mm1.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Mm1.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	698 275123 0 39997 0 10039.93054627603 10003 0 9 10179 20017
+1	275821 349451 4 40001 1.295874504566 10040.43054627603 10000 0.5 4.653233951697 7544.1943337155 7223.1406484523
+
