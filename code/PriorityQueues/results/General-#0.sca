@@ -1,0 +1,118 @@
+version 2
+run General-0-20200408-11:02:01-48818
+attr configname General
+attr datetime 20200408-11:02:01
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network PriorityQueues
+attr processid 48818
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.source.interArrivalTime exponential(1.428571429s)
+param **.source1.interArrivalTime exponential(0.769230769s)
+param **.server.serviceTime exponential(0.25s)
+param **.source.numJobs 10000
+param **.source.jobType 0
+param **.source1.numJobs 10000
+param **.source1.jobType 1
+
+scalar PriorityQueues.source created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar PriorityQueues.source1 created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar PriorityQueues.passiveQueue queueingTime:mean 0.59086986887918
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar PriorityQueues.passiveQueue queueingTime:max 5.972071698904
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar PriorityQueues.passiveQueue queueLength:timeavg 0.15072908527727
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar PriorityQueues.passiveQueue queueLength:max 7
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar PriorityQueues.passiveQueue dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar PriorityQueues.passiveQueue1 queueingTime:mean 0.35627686542871
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar PriorityQueues.passiveQueue1 queueingTime:max 3.361165389263
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar PriorityQueues.passiveQueue1 queueLength:timeavg 0.12592759546207
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar PriorityQueues.passiveQueue1 queueLength:max 9
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar PriorityQueues.passiveQueue1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar PriorityQueues.server busy:timeavg 0.34921157152101
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar PriorityQueues.sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar PriorityQueues.sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar PriorityQueues.sink delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar PriorityQueues.sink delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar PriorityQueues.sink queuesVisited:mean 0.8662
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar PriorityQueues.sink queuesVisited:max 2
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar PriorityQueues.sink totalServiceTime:mean 0.24853048062824
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar PriorityQueues.sink totalServiceTime:max 2.587663773743
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar PriorityQueues.sink totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar PriorityQueues.sink totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar PriorityQueues.sink totalQueueingTime:mean 0.19689387019361
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar PriorityQueues.sink totalQueueingTime:max 5.972071698904
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar PriorityQueues.sink lifeTime:mean 0.44542435082185
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar PriorityQueues.sink lifeTime:max 6.012311671797
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+

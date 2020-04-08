@@ -1,0 +1,39 @@
+file 1299945 1586358126                                         
+version 2
+run General-0-20200408-11:02:01-48818
+attr configname General
+attr datetime 20200408-11:02:01
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network PriorityQueues
+attr processid 48818
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.source.interArrivalTime exponential(1.428571429s)
+param **.source1.interArrivalTime exponential(0.769230769s)
+param **.server.serviceTime exponential(0.25s)
+param **.source.numJobs 10000
+param **.source.jobType 0
+param **.source1.numJobs 10000
+param **.source1.jobType 1
+
+vector 0 PriorityQueues.passiveQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 PriorityQueues.passiveQueue1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 PriorityQueues.sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+0	1035 203179 0 119919 0 14214.030769976486 7263 0 7 6735 12931
+1	204214 278027 0 92348 0 7597.149955477697 10063 0 9 9551 18235
+2	482241 817703 9 120001 1.156101351645 14233.578033271058 20000 1.002745e-06 6.012311671797 8908.487016437 8764.5520262306
+
