@@ -1,0 +1,186 @@
+version 2
+run General-0-20200506-11:38:03-8467
+attr configname General
+attr datetime 20200506-11:38:03
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network final_base
+attr processid 8467
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.source.interArrivalTime exponential(2s)
+param **.source1.interArrivalTime exponential(2s)
+param **.cashier.serviceTime "normal(1s, 0.5s)"
+param **.cashier1.serviceTime "normal(1s, 0.5s)"
+param **.barista.serviceTime "normal(1.5s, .75s)"
+param **.barista1.serviceTime "normal(1.5s, .75s)"
+param **.barista2.serviceTime "normal(1.5s, .75s)"
+param **.source.numJobs 1000000
+param **.source1.numJobs 1000000
+param **.source.jobType 0
+param **.source1.jobType 1
+param **.final_router.error uniform(0,1)
+
+scalar final_base.source created:last 1000000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar final_base.source1 created:last 1000000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar final_base.cashier busy:timeavg 0.50357702776146
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar final_base.cashier queueingTime:mean 0.62916890160845
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar final_base.cashier queueingTime:max 13.48445990727
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar final_base.cashier queueLength:timeavg 0.3143746551764
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar final_base.cashier queueLength:max 14
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar final_base.cashier dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar final_base.cashier1 busy:timeavg 0.5037876679948
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar final_base.cashier1 queueingTime:mean 0.63204463547585
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar final_base.cashier1 queueingTime:max 14.5261976934
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar final_base.cashier1 queueLength:timeavg 0.31581156320005
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar final_base.cashier1 queueLength:max 13
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar final_base.cashier1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar final_base.barista busy:timeavg 0.50427350846607
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar final_base.barista queueingTime:mean 0.84635581698612
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar final_base.barista queueingTime:max 20.192096599475
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar final_base.barista queueLength:timeavg 0.28220971355177
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar final_base.barista queueLength:max 13
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar final_base.barista dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar final_base.barista1 busy:timeavg 0.50362665722681
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar final_base.barista1 queueingTime:mean 0.8382479362478
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar final_base.barista1 queueingTime:max 19.802587771439
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar final_base.barista1 queueLength:timeavg 0.27882391623007
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar final_base.barista1 queueLength:max 11
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar final_base.barista1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar final_base.barista2 busy:timeavg 0.50375419766342
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar final_base.barista2 queueingTime:mean 0.84422460760776
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar final_base.barista2 queueingTime:max 17.038440235233
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar final_base.barista2 queueLength:timeavg 0.28135059656585
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar final_base.barista2 queueLength:max 11
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar final_base.barista2 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar final_base.sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar final_base.sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar final_base.sink delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar final_base.sink delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar final_base.sink queuesVisited:mean 0.990812
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar final_base.sink queuesVisited:max 2
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar final_base.sink totalServiceTime:mean 2.5207001080654
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar final_base.sink totalServiceTime:max 7.120884123934
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar final_base.sink totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar final_base.sink totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar final_base.sink totalQueueingTime:mean 1.4735531538449
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar final_base.sink totalQueueingTime:max 24.090143942115
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar final_base.sink lifeTime:mean 4.1942532619105
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar final_base.sink lifeTime:max 27.612810856089
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+

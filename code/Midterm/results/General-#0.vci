@@ -1,0 +1,155 @@
+file 16722611 1586643533                                        
+version 2
+run General-0-20200411-18:18:48-60546
+attr configname General
+attr datetime 20200411-18:18:48
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Midterm
+attr processid 60546
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.api_server_1.serviceTime exponential(.01s)
+param **.local_cache_1.serviceTime exponential(.01s)
+param **.job_manager_1.serviceTime exponential(.01s)
+param **.client_1_process_updates.serviceTime exponential(.001s)
+param **.client_2_process_updates.serviceTime exponential(.001s)
+param **.api_server_2.serviceTime exponential(.01s)
+param **.local_cache_2.serviceTime exponential(.01s)
+param **.job_manager_2.serviceTime exponential(.01s)
+param **.client_3_process_updates.serviceTime exponential(.001s)
+param **.client_4_process_updates.serviceTime exponential(.001s)
+param **.pub_sub_orchestration.serviceTime exponential(.1s)
+param **.central_server.serviceTime exponential(.1s)
+param **.database.serviceTime exponential(.01s)
+param **.central_update_delay.delay 20s
+param **.api_peer_update.delay 2s
+param **.client1.numJobs 10000
+param **.client2.numJobs 10000
+param **.client3.numJobs 10000
+param **.client4.numJobs 10000
+param **.client1.interArrivalTime 0.5s
+param **.client2.interArrivalTime 0.5s
+param **.client3.interArrivalTime 0.5s
+param **.client4.interArrivalTime 0.5s
+param **.central_server_input.capacity 2500
+param **.database_input.capacity 50
+param **.api_server_1_input.capacity 2500
+param **.api_server_2_input.capacity 2500
+param **.local_cache_1_input.capacity 1000
+param **.local_cache_2_input.capacity 1000
+param **.job_manager_1_input.capacity 1000
+param **.job_manager_2_input.capacity 1000
+param **.pub_sub_orchestration_input.capacity 1000
+
+vector 0 Midterm.send_to_client_4 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Midterm.api_server_2_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Midterm.send_to_client_3 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Midterm.local_cache_2_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 Midterm.job_manager_2_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 Midterm.pub_sub_orchestration_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 6 Midterm.central_server_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 7 Midterm.database_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 8 Midterm.api_server_1_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 9 Midterm.job_manager_1_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 10 Midterm.local_cache_1_input queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 11 Midterm.send_to_client_1 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 12 Midterm.send_to_client_2 queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 13 Midterm.client_4_sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 14 Midterm.client_2_sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 15 Midterm.job_manager_1_added lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 16 Midterm.job_manager_2_added lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 17 Midterm.cache_2_updated lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 18 Midterm.cache_1_updated lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 19 Midterm.client_3_sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 20 Midterm.client_1_sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+vector 21 Midterm.database_sink lifeTime:vector ETV
+attr interpolationmode none
+attr title "lifetime of arrived jobs, vector"
+attr unit s
+5	4760 927435 0 768366 0 2406.083289359374 32768 0 24 85498 394048
+6	932195 928621 0 771408 0 2415.890565498104 32768 0 28 88890 456584
+20	1860816 1397684 400 1309880 2.606239893845 4098.501323456084 32768 2.000735479546 5.121821758459 78624.848498452 192031.82951308
+19	3258500 1397961 398 1309882 2.60448807519 4098.502403932258 32768 2.000718940347 5.121926126968 78624.982950955 192032.52450088
+21	4656461 1431578 4966 1315744 20.510805281167 4117.004045642875 32768 20.001644675226 23.553628413806 668375.14148175 13636400.974084
+5	6088039 970040 768395 1533600 2406.303774423614 4797.52658273386 32768 0 16 91370 439084
+6	7058079 970177 771414 1541479 2415.91462485756 4822.033409301068 32768 0 18 86282 388016
+0	8028256 54649 0 1597592 0 4997.514946955155 1885 0 1 942 942
+1	8082905 460555 0 1598379 0 5000.000573191169 20001 0 1 10000 10000
+2	8543460 18646 0 1590977 0 4976.804132676281 643 0 1 321 321
+3	8562106 289843 0 1598421 0 5000.004337336287 10009 0 1 5004 5004
+4	8851949 289483 0 1598438 0 5000.009648431549 9985 0 1 4992 4992
+5	9141432 82288 1533631 1598821 4797.601968687135 5002.467619126385 2753 0 10 6128 21068
+6	9223720 81244 1541520 1599994 4822.314177025128 5020.406932856669 2717 0 13 7026 29806
+7	9304964 198211 0 1599968 0 5019.975054678065 6839 0 4 4015 4683
+8	9503175 460556 0 1598363 0 5000.000293739168 20001 0 1 10000 10000
+9	9963731 289439 0 1598416 0 5000.003286517167 9993 0 1 4996 4996
+10	10253170 296792 0 1597907 0 4998.53085550004 9907 0 1 4953 4953
+11	10549962 18937 0 1590965 0 4976.800093701661 631 0 2 319 323
+12	10568899 53201 0 1597880 0 4998.517303554023 1777 0 1 888 888
+13	10622100 857224 34 1598401 0.509910290382 5000.001632897288 20000 1.675014e-06 0.11789642709 320.31175576252 8.6399591503866
+14	11479324 857120 36 1598420 0.509962610311 5000.003996103696 20000 1.0902496e-05 0.125155562328 323.75699201518 8.8697601190906
+15	12336444 857204 38 1598435 0.514496088752 5000.005714403126 20000 8.8139267e-05 0.133961477792 552.9330493929 21.776585406002
+16	13193648 857392 49 1598444 0.517190976361 5000.012143253279 20000 0.000151143484 0.131466821787 547.56936861306 21.1581453703
+17	14051040 857214 66 1598428 0.526554787167 5000.004666073946 20000 0.000210737995 0.145090804575 549.9270147004 21.539869257878
+18	14908254 857114 71 1598437 0.527775244427 5000.006899468183 20000 0.000139636457 0.139495541952 554.24101245953 21.889744956594
+19	15765368 316660 1309981 1598867 4098.863248875035 5002.670164222339 7232 2.000595811038 3.791531437089 16955.6887114 40207.126292742
+20	16082028 316640 1309983 1598865 4098.865312717221 5002.669231643552 7232 2.000468612443 3.791942535552 16955.508108316 40206.233825763
+21	16398668 323942 1315754 1600004 4117.007469948268 5020.586836475016 7232 20.002544057145 22.123660166993 147516.18372974 3009609.2669425
+

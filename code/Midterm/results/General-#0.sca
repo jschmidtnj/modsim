@@ -1,0 +1,784 @@
+version 2
+run General-0-20200411-18:18:48-60546
+attr configname General
+attr datetime 20200411-18:18:48
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Midterm
+attr processid 60546
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.api_server_1.serviceTime exponential(.01s)
+param **.local_cache_1.serviceTime exponential(.01s)
+param **.job_manager_1.serviceTime exponential(.01s)
+param **.client_1_process_updates.serviceTime exponential(.001s)
+param **.client_2_process_updates.serviceTime exponential(.001s)
+param **.api_server_2.serviceTime exponential(.01s)
+param **.local_cache_2.serviceTime exponential(.01s)
+param **.job_manager_2.serviceTime exponential(.01s)
+param **.client_3_process_updates.serviceTime exponential(.001s)
+param **.client_4_process_updates.serviceTime exponential(.001s)
+param **.pub_sub_orchestration.serviceTime exponential(.1s)
+param **.central_server.serviceTime exponential(.1s)
+param **.database.serviceTime exponential(.01s)
+param **.central_update_delay.delay 20s
+param **.api_peer_update.delay 2s
+param **.client1.numJobs 10000
+param **.client2.numJobs 10000
+param **.client3.numJobs 10000
+param **.client4.numJobs 10000
+param **.client1.interArrivalTime 0.5s
+param **.client2.interArrivalTime 0.5s
+param **.client3.interArrivalTime 0.5s
+param **.client4.interArrivalTime 0.5s
+param **.central_server_input.capacity 2500
+param **.database_input.capacity 50
+param **.api_server_1_input.capacity 2500
+param **.api_server_2_input.capacity 2500
+param **.local_cache_1_input.capacity 1000
+param **.local_cache_2_input.capacity 1000
+param **.job_manager_1_input.capacity 1000
+param **.job_manager_2_input.capacity 1000
+param **.pub_sub_orchestration_input.capacity 1000
+
+scalar Midterm.client3 created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Midterm.client_4_sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.client_4_sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.client_4_sink delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.client_4_sink delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.client_4_sink queuesVisited:mean 1.0942
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.client_4_sink queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.client_4_sink totalServiceTime:mean 0.010968802085002
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_4_sink totalServiceTime:max 0.105410316261
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.client_4_sink totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_4_sink totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.client_4_sink totalQueueingTime:mean 0.0050467857031241
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_4_sink totalQueueingTime:max 0.089109476063
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.client_4_sink lifeTime:mean 0.016015587788126
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.client_4_sink lifeTime:max 0.11789642709
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.client4 created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Midterm.api_server_2 busy:timeavg 0.039768574738972
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.send_to_client_4 queueingTime:mean 0.00096117891916985
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.send_to_client_4 queueingTime:max 0.006728553459
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.send_to_client_4 queueLength:timeavg 0.00018034356766424
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.send_to_client_4 queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.send_to_client_4 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.client_4_process_updates busy:timeavg 0.0039267240070327
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.api_server_2_input queueingTime:mean 0.010003028352062
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.api_server_2_input queueingTime:max 0.089109476063
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.api_server_2_input queueLength:timeavg 0.019924022186788
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.api_server_2_input queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.api_server_2_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.client_3_process_updates busy:timeavg 0.0079957772127959
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.send_to_client_3 queueingTime:mean 0.0010199541702492
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.send_to_client_3 queueingTime:max 0.009000294959
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.send_to_client_3 queueLength:timeavg 6.5212553694196e-05
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.send_to_client_3 queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.send_to_client_3 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.client_3_sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.client_3_sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.client_3_sink delaysVisited:mean 1
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.client_3_sink delaysVisited:max 1
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.client_3_sink queuesVisited:mean 2.72325
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.client_3_sink queuesVisited:max 6
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.client_3_sink totalServiceTime:mean 0.11153718446485
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_3_sink totalServiceTime:max 1.448535491988
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.client_3_sink totalDelayTime:mean 2
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_3_sink totalDelayTime:max 2
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.client_3_sink totalQueueingTime:mean 0.27797960709401
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_3_sink totalQueueingTime:max 2.898707349163
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.client_3_sink lifeTime:mean 2.3895167915589
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.client_3_sink lifeTime:max 5.121926126968
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.local_cache_2_input queueingTime:mean 0.010082584435908
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.local_cache_2_input queueingTime:max 0.094890809261
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.local_cache_2_input queueLength:timeavg 0.01004927395155
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.local_cache_2_input queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.local_cache_2_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.local_cache_2 busy:timeavg 0.039792538667234
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.job_manager_2_input queueingTime:mean 0.0098084931679585
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.job_manager_2_input queueingTime:max 0.064560319113
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.job_manager_2_input queueLength:timeavg 0.0097526443599623
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.job_manager_2_input queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.job_manager_2_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.job_manager_2 busy:timeavg 0.039619572539409
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.pub_sub_orchestration_input queueingTime:mean 0.31976127212342
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.pub_sub_orchestration_input queueingTime:max 2.8563088877
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.pub_sub_orchestration_input queueLength:timeavg 2.1746320163337
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.pub_sub_orchestration_input queueLength:max 24
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.pub_sub_orchestration_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.pub_sub_orchestration busy:timeavg 0.8006110808566
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.central_server_input queueingTime:mean 0.31803207999636
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.central_server_input queueingTime:max 3.457892374159
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.central_server_input queueLength:timeavg 2.161731908132
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.central_server_input queueLength:max 28
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.central_server_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.central_server busy:timeavg 0.79567474638393
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.database_input queueingTime:mean 0.010866781161268
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.database_input queueingTime:max 0.095739279265
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.database_input queueLength:timeavg 0.0074002354705735
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.database_input queueLength:max 4
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.database_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.database busy:timeavg 0.080373140811388
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.database_sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.database_sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.database_sink delaysVisited:mean 1
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.database_sink delaysVisited:max 1
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.database_sink queuesVisited:mean 2.87725
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.database_sink queuesVisited:max 6
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.database_sink totalServiceTime:mean 0.12000202304155
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.database_sink totalServiceTime:max 1.146102336055
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.database_sink totalDelayTime:mean 20
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.database_sink totalDelayTime:max 20
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.database_sink totalQueueingTime:mean 0.27728110724589
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.database_sink totalQueueingTime:max 3.469352078451
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.database_sink lifeTime:mean 20.397283130287
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.database_sink lifeTime:max 23.553628413806
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.central_update_delay delayedJobs:timeavg 159.34392254466
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, timeavg"
+scalar Midterm.central_update_delay delayedJobs:max 164
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, max"
+scalar Midterm.api_peer_update delayedJobs:timeavg 15.934392254466
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, timeavg"
+scalar Midterm.api_peer_update delayedJobs:max 20
+attr interpolationmode sample-hold
+attr title "number of delayed jobs, max"
+scalar Midterm.cache_2_updated generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.cache_2_updated generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.cache_2_updated delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.cache_2_updated delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.cache_2_updated queuesVisited:mean 1.5004
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.cache_2_updated queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.cache_2_updated totalServiceTime:mean 0.019972173933125
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_2_updated totalServiceTime:max 0.126969353121
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.cache_2_updated totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_2_updated totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.cache_2_updated totalQueueingTime:mean 0.0075241768018954
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_2_updated totalQueueingTime:max 0.121413693002
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.cache_2_updated lifeTime:mean 0.02749635073502
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_2_updated lifeTime:max 0.145090804575
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_2_added generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.job_manager_2_added generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.job_manager_2_added delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.job_manager_2_added delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.job_manager_2_added queuesVisited:mean 1.4992
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.job_manager_2_added queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.job_manager_2_added totalServiceTime:mean 0.019928754359899
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_2_added totalServiceTime:max 0.125238049222
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_2_added totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_2_added totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_2_added totalQueueingTime:mean 0.0074497140707537
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_2_added totalQueueingTime:max 0.10239085686
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_2_added lifeTime:mean 0.027378468430653
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_2_added lifeTime:max 0.131466821787
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.api_server_1 busy:timeavg 0.04026319130247
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.api_server_1_input queueingTime:mean 0.01008977195689
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.api_server_1_input queueingTime:max 0.102324821242
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.api_server_1_input queueLength:timeavg 0.020096798014899
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.api_server_1_input queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.api_server_1_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.cache_1_updated generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.cache_1_updated generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.cache_1_updated delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.cache_1_updated delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.cache_1_updated queuesVisited:mean 1.4953
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.cache_1_updated queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.cache_1_updated totalServiceTime:mean 0.020186240996398
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_1_updated totalServiceTime:max 0.134909822443
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.cache_1_updated totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_1_updated totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.cache_1_updated totalQueueingTime:mean 0.0075258096265786
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_1_updated totalQueueingTime:max 0.108898525774
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.cache_1_updated lifeTime:mean 0.027712050622976
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.cache_1_updated lifeTime:max 0.139495541952
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.client1 created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Midterm.client2 created:last 10000
+attr interpolationmode none
+attr title "the number of jobs created, last"
+scalar Midterm.client_1_process_updates busy:timeavg 0.0079297150397555
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.client_1_sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.client_1_sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.client_1_sink delaysVisited:mean 1
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.client_1_sink delaysVisited:max 1
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.client_1_sink queuesVisited:mean 2.72295
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.client_1_sink queuesVisited:max 6
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.client_1_sink totalServiceTime:mean 0.11152889269294
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_1_sink totalServiceTime:max 1.448518454449
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.client_1_sink totalDelayTime:mean 2
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_1_sink totalDelayTime:max 2
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.client_1_sink totalQueueingTime:mean 0.27798002247624
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_1_sink totalQueueingTime:max 2.898707349163
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.client_1_sink lifeTime:mean 2.3895089151692
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.client_1_sink lifeTime:max 5.121821758459
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.client_2_process_updates busy:timeavg 0.0039385686379902
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.client_2_sink generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.client_2_sink generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.client_2_sink delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.client_2_sink delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.client_2_sink queuesVisited:mean 1.0888
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.client_2_sink queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.client_2_sink totalServiceTime:mean 0.011095938705305
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_2_sink totalServiceTime:max 0.1024689283
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.client_2_sink totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_2_sink totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.client_2_sink totalQueueingTime:mean 0.0050919108954538
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.client_2_sink totalQueueingTime:max 0.102324821242
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.client_2_sink lifeTime:mean 0.016187849600759
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.client_2_sink lifeTime:max 0.125155562328
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_1 busy:timeavg 0.039901913126837
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.job_manager_1_added generation:mean 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, mean"
+scalar Midterm.job_manager_1_added generation:max 0
+attr interpolationmode none
+attr title "the generation of the arrived jobs, max"
+scalar Midterm.job_manager_1_added delaysVisited:mean 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Midterm.job_manager_1_added delaysVisited:max 0
+attr interpolationmode none
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Midterm.job_manager_1_added queuesVisited:mean 1.4996
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Midterm.job_manager_1_added queuesVisited:max 4
+attr interpolationmode none
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Midterm.job_manager_1_added totalServiceTime:mean 0.020123793402121
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_1_added totalServiceTime:max 0.118108486938
+attr interpolationmode none
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_1_added totalDelayTime:mean 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_1_added totalDelayTime:max 0
+attr interpolationmode none
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_1_added totalQueueingTime:mean 0.0075228590675236
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_1_added totalQueueingTime:max 0.11280454906
+attr interpolationmode none
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_1_added lifeTime:mean 0.027646652469645
+attr interpolationmode none
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Midterm.job_manager_1_added lifeTime:max 0.133961477792
+attr interpolationmode none
+attr title "lifetime of arrived jobs, max"
+attr unit s
+scalar Midterm.job_manager_1_input queueingTime:mean 0.0099198282188899
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.job_manager_1_input queueingTime:max 0.09167301461
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.job_manager_1_input queueLength:timeavg 0.0098712487993475
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.job_manager_1_input queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.job_manager_1_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.local_cache_1 busy:timeavg 0.040150679242475
+attr interpolationmode sample-hold
+attr title "server busy state, timeavg"
+scalar Midterm.local_cache_1_input queueingTime:mean 0.010017862500035
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.local_cache_1_input queueingTime:max 0.091230198082
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.local_cache_1_input queueLength:timeavg 0.0098830026406856
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.local_cache_1_input queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.local_cache_1_input dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.send_to_client_1 queueingTime:mean 0.0010921288195365
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.send_to_client_1 queueingTime:max 0.012298954541
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.send_to_client_1 queueLength:timeavg 6.8521985448924e-05
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.send_to_client_1 queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.send_to_client_1 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+scalar Midterm.send_to_client_2 queueingTime:mean 0.0010591197524527
+attr interpolationmode none
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Midterm.send_to_client_2 queueingTime:max 0.006062809324
+attr interpolationmode none
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Midterm.send_to_client_2 queueLength:timeavg 0.00018732836833838
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Midterm.send_to_client_2 queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Midterm.send_to_client_2 dropped:count 0
+attr interpolationmode none
+attr title "drop event, count"
+
